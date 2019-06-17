@@ -5,7 +5,9 @@ const twilio = require('twilio');
 const texts = require('../controllers/textController.js');
 
 // Twilio auth info
-// See Notepad
+const accountSid = process.env.TWILIO_ACCOUNT;
+const authToken = process.env.TWILIO_AUTH;
+const client = new twilio(accountSid, authToken);
 
 // ------------------------------------
 // Routing

@@ -1,9 +1,12 @@
+// DOTENV
+require('dotenv').config()
+
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const port = process.env.PORT || 5000;
-const mongoURL = 'mongodb+srv://mattcowan:Brokenchains1@mydata-xomta.mongodb.net/test?retryWrites=true&w=majority';
+const mongoURL = process.env.DB_LINK;
 
 // My Routes
 const billsRoute = require('./routes/bills');
